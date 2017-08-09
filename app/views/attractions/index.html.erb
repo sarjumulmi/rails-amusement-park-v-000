@@ -1,0 +1,13 @@
+<h1>Attractions</h1>
+<div class="">
+  <ul class="info">
+    <% @attractions.each do |attraction| %>
+      <% if admin? %>
+        <li><%= link_to "Show #{attraction.name}", attraction%></li>
+      <% else %>
+        <li><%= link_to "Go on #{attraction.name}", attraction %></li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>
+<%= link_to "New Attraction", new_attraction_path if admin? %>

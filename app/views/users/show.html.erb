@@ -1,0 +1,17 @@
+<p><%= @notice %></p><br>
+<% if @message %>
+  <p><%= @message %></p>
+<% end %>
+
+<h1><%=@user.name.titleize %>'s Profile</h1>
+<div class="">
+  <% if @user.admin %>
+    <h2>ADMIN</h2>
+  <% end %>
+  <p>Name: <%= @user.name.titleize %></p>
+  <p>Height: <%= @user.height %></p>
+  <p>Tickets: <%= @user.tickets %></p>
+  <p>Mood: <%= @user.mood %></p>
+  <%= link_to "See attractions", attractions_path %>
+
+</div>

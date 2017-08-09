@@ -33,6 +33,11 @@
     <div class="container"  role="main">
       <%= yield %>
     </div>
-
+    <footer>
+      <div class="footer">
+        <p><%= current_user.name.titleize if current_user %></p>
+        <%= link_to "Log Out", signout_path if current_user %>
+      </div>
+    </footer>
   </body>
 </html>
